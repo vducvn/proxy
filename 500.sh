@@ -38,8 +38,8 @@ nserver 2001:4860:4860::8888
 nserver 2001:4860:4860::8844
 nscache 65536
 timeouts 1 5 30 60 180 1800 15 60
-setgid 65535
-setuid 65535
+setgid 22001
+setuid 22500
 stacksize 6291456 
 flush
 
