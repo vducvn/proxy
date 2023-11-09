@@ -38,8 +38,8 @@ nserver 2001:4860:4860::8888
 nserver 2001:4860:4860::8844
 nscache 65536
 timeouts 1 5 30 60 180 1800 15 60
-setgid 22001
-setuid 22500
+setgid 65535
+setuid 65535
 stacksize 6291456 
 flush
 
@@ -89,8 +89,8 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
-FIRST_PORT=66658
-LAST_PORT=67158
+FIRST_PORT=22001
+LAST_PORT=22500
 
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
