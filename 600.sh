@@ -95,7 +95,7 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
 while :; do
-  read -p "Enter FIRST_PORT between 10000 and 60000: " FIRST_PORT
+  read -p "Enter FIRST_PORT between 48202 and 48702: " FIRST_PORT
   [[ $FIRST_PORT =~ ^[0-9]+$ ]] || { echo "Enter a valid number"; continue; }
   if ((FIRST_PORT >= 10000 && FIRST_PORT <= 60000)); then
     echo "OK! Valid number"
@@ -104,7 +104,7 @@ while :; do
     echo "Number out of range, try again"
   fi
 done
-LAST_PORT=$(($FIRST_PORT + 1000))
+LAST_PORT=$(($FIRST_PORT + 500))
 echo "LAST_PORT is $LAST_PORT. Continue..."
 
 gen_data >$WORKDIR/data.txt
