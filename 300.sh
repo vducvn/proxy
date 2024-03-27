@@ -91,7 +91,6 @@ echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
 FIRST_PORT=49532
 LAST_PORT=49831
-
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
 gen_ifconfig >$WORKDIR/boot_ifconfig.sh
